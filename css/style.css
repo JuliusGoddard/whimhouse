@@ -10109,3 +10109,51 @@ textarea.form-control {
 .card-title {
   color: white;
 }
+
+.image-row {
+  display: grid;
+  grid-template-columns: 1fr; /* Stack vertically on mobile */
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.image-row img {
+  width: 100%;
+  height: 260px; /* Enforces uniform height across all images */
+  object-fit: cover; /* Crops rather than stretching/skewing aspect ratios */
+  border-radius: 8px; /* Optional slight round corner polish */
+  display: block;
+}
+
+/* Side-by-side layout on screens wider than 640px */
+@media (min-width: 640px) {
+  .image-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.main-heading {
+  color: white;
+  transition: color 0.3s ease-in-out;
+  font-size: 1.5rem !important;
+  font-family:'Times New Roman', Times, serif
+}
+
+.scrolled .main-heading {
+  color: black;
+   font-size: 1.5rem !important;
+  font-family:'Times New Roman', Times, serif
+}
+
+@media (max-width: 640px) {
+
+.main-heading {
+display: none
+}
+
+.scrolled .main-heading {
+  display: none
+}
+
+
+}
