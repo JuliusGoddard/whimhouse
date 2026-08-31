@@ -31,27 +31,50 @@
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-		<div class="container">
-			<a class="navbar-brand" href="index.html">Whim<span>House</span></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Menu
-			</button>
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Whim<span>House</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
 
-			<div class="collapse navbar-collapse" id="ftco-nav">
+    <div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+					
+					<!-- Services Dropdown -->
+    <li class="nav-item dropdown">
+      <a 
+        class="nav-link dropdown-toggle" 
+        href="#" 
+        id="servicesDropdown" 
+        role="button" 
+        data-toggle="dropdown" 
+        aria-haspopup="true" 
+        aria-expanded="false"
+      >
+        Services
+      </a>
+      <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+        <a class="dropdown-item" href="shiatsu.html">Shiatsu</a>
+        <a class="dropdown-item" href="glass-collection.html">Glass Collection</a>
+        <a class="dropdown-item" href="music-room.html">Music Room</a>
+        <a class="dropdown-item" href="meditation-suite.html">Meditation Suite</a>
+        <a class="dropdown-item" href="film-library.html">Film Library</a>
+        <a class="dropdown-item" href="nature-walks.html">Nature And Walks</a>
+      </div>
+    </li>
 					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+					<li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
 					<li class="nav-item"><a href="booking.html" class="nav-link">Booking</a></li>
 				</ul>
 			</div>
-		</div>
-	</nav>
+    </div>
+  </nav>
 	<!-- END nav -->
 	<div class="hero">
 		<section class="home-slider owl-carousel">
-		<div class="slider-item" style="background-image:url(images/bg_1.jpg);">
+		<div class="slider-item" style="background-image:url(images/outside.JPG);">
 				<div class="overlay"></div>
 				<div class="container">
 					<div
@@ -79,7 +102,7 @@
 </div>
 			</div> -->
 
-			<div class="slider-item" style="background-image:url(images/bg_2.webp);">
+			<div class="slider-item" style="background-image:url(images/44.png);">
 				<div class="overlay"></div>
 				<div class="container">
 					<div
@@ -191,7 +214,11 @@
 						<span class="subheading">Wilding On A Whim</span>
 						<h2 class="mb-4">An immersive eco retreat</h2>
 					</div>
-					<p>Immerse yourself in our world, we offer not just three luxury glamping pods, but a meditation room, cinema with classical music, acres of untamed wildlife and all of this 30 minutes from the centre of Edinburgh. </p>
+					<p>A haven of natural beauty and aesthetic calm
+Nestled at the foot of the Pentland Hills
+Offering Shiatsu and Meditation
+Music and the arts
+To relax the body and restore the spirit </p>
 					<p><a href="booking.html" class="btn btn-secondary rounded">Reserve Your Pod Now</a></p>
 				</div>
 			</div>
@@ -265,7 +292,7 @@ Charlie, Katie and Ted (the Beddy Whippet)</p>
 		</div>
 	</section>
 
-	<section class="ftco-section ftco-no-pb ftco-room">
+	<!-- <section class="ftco-section ftco-no-pb ftco-room">
 		<div class="container-fluid px-0">
 			<div class="row no-gutters justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
@@ -326,10 +353,94 @@ Charlie, Katie and Ted (the Beddy Whippet)</p>
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
+
+	<div class="container-fluid px-0">
+			<div class="row no-gutters justify-content-center mb-5 pb-3" style="margin-top: 50px">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<span class="subheading">Our Services</span>
+					<h2 class="mb-4">Whim House offers unique features</h2>
+				</div>
+			</div>
+		</div>
 
 
+<div class="container-fluid px-md-4 py-5">
+  <div class="row g-4 gy-4">
+    
+    <div class="col-12 col-lg-6 mb-4">
+      <div class="card h-100 text-white border-0 shadow-sm custom-card" 
+           style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)), url('images/ShiatsuMassage.jpg');">
+        <div class="card-body d-flex flex-column justify-content-end p-4">
+          <h3 class="card-title h4 fw-bold mb-3">Shiatsu</h3>
+          <div>
+            <a href="/shiatsu.html" class="btn btn-primary stretched-link">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="col-12 col-lg-6 mb-4">
+      <div class="card h-100 text-white border-0 shadow-sm custom-card" 
+           style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)), url('images/Vase.PNG');">
+        <div class="card-body d-flex flex-column justify-content-end p-4">
+          <h3 class="card-title h4 fw-bold mb-3">Glass Collection</h3>
+          <div>
+            <a href="/glass-collection.html" class="btn btn-primary stretched-link">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6 mb-4">
+      <div class="card h-100 text-white border-0 shadow-sm custom-card" 
+           style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)), url('images/Best.JPG');">
+        <div class="card-body d-flex flex-column justify-content-end p-4">
+          <h3 class="card-title h4 fw-bold mb-3">Music Room</h3>
+          <div>
+            <a href="/music-room.html" class="btn btn-primary stretched-link">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6 mb-4">
+      <div class="card h-100 text-white border-0 shadow-sm custom-card" 
+           style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)), url('images/meditation.JPG');">
+        <div class="card-body d-flex flex-column justify-content-end p-4">
+          <h3 class="card-title h4 fw-bold mb-3">Meditation Room</h3>
+          <div>
+            <a href="/meditation-suite.html" class="btn btn-primary stretched-link">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6 mb-4">
+      <div class="card h-100 text-white border-0 shadow-sm custom-card" 
+           style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)), url('images/403_0178.JPG');">
+        <div class="card-body d-flex flex-column justify-content-end p-4">
+          <h3 class="card-title h4 fw-bold mb-3">Film Library</h3>
+          <div>
+            <a href="/film-library.html" class="btn btn-primary stretched-link">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6 mb-4">
+      <div class="card h-100 text-white border-0 shadow-sm custom-card" 
+           style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)), url('images/2.JPG');">
+        <div class="card-body d-flex flex-column justify-content-end p-4">
+          <h3 class="card-title h4 fw-bold mb-3">Nature And Walks</h3>
+          <div>
+            <a href="/nature-walks.html" class="btn btn-primary stretched-link">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
