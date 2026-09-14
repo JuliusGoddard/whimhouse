@@ -8365,6 +8365,7 @@ h1, h2, h3, h4, h5,
   .owl-carousel .owl-item {
     opacity: .4; }
     .owl-carousel .owl-item.active {
+      min-width: 100vw;
       opacity: 1; }
   .owl-carousel .owl-nav {
     position: absolute;
@@ -8441,6 +8442,7 @@ h1, h2, h3, h4, h5,
           background-position: center center !important; } }
       .owl-carousel.home-slider .slider-item .overlay {
         position: absolute;
+        min-width: 100vw;
         top: 0;
         bottom: 0;
         left: 0;
