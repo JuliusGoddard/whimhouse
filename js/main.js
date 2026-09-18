@@ -59,6 +59,21 @@
 	};
 	loader();
 
+	var scrollToHash = function() {
+		var hash = window.location.hash;
+		var target = hash ? document.getElementById(hash.substring(1)) : null;
+
+		if (target) {
+			var targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+			window.scrollTo(0, targetPosition - 100);
+		}
+	};
+	$(scrollToHash);
+	$(window).on('load', scrollToHash);
+	$(window).on('pageshow hashchange', function() {
+		setTimeout(scrollToHash, 250);
+	});
+
 	// Scrollax
    $.Scrollax();
 
