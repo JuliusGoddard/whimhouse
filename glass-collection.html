@@ -161,17 +161,8 @@
           </p>
           
           <div style="width: 100%; display: flex; justify-content: center;">
-          <iframe 
-  width="560" 
-  height="315" 
-  style="display: block; text-align: center"
-  src="https://www.youtube.com/embed/iYd1oVrMc0s" 
-  title="The Bacchic Procession - Carl Anton Günther" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  referrerpolicy="strict-origin-when-cross-origin" 
-  allowfullscreen>
-</iframe>
+			<div id="yt-player"></div>
+ 
 </div>
 
 
@@ -268,7 +259,47 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+<script>
+  // 1. Load the YouTube IFrame API asynchronously
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('yt-player', {
+      height: '360',
+      width: '640',
+      videoId: 'iYd1oVrMc0s', // Replace with your video ID
+      playerVars: {
+        'cc_load_policy': 0
+      },
+      events: {
+        'onStateChange': onPlayerStateChange,
+        'onApiChange': disableCaptions
+      }
+    });
+  }
+
+  function disableCaptions() {
+    try {
+      // Clear active caption track and unload the subtitle module
+      player.setOption('captions', 'track', {});
+      player.unloadModule('captions');
+      player.unloadModule('cc');
+    } catch (e) {
+      // Catch errors if caption module has not initialized yet
+    }
+  }
+
+  function onPlayerStateChange(event) {
+    // When the video starts playing (state = 1), ensure captions are unloaded
+    if (event.data === YT.PlayerState.PLAYING) {
+      disableCaptions();
+    }
+  }
+</script>
 </body>
 
 </html>
